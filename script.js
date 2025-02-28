@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 let enteredID = studentInput.value.trim();
 
                 if (studentIDs.includes(enteredID)) {
+                    console.log("student id matched");
                     alert("⚠️ You have already registered with this Student ID!");
                     studentInput.value = ""; // Clear input
                 }
