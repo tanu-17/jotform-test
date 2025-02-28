@@ -9,7 +9,7 @@ async function fetchExistingStudentIDs() {
     try {
         let response = await fetch(url);
         let data = await response.json();
-        
+
         console.log("API Response:", data); // Debugging log
 
         if (data.content) {
@@ -32,12 +32,13 @@ async function fetchExistingStudentIDs() {
     }
 }
 
+// ✅ Validate Student ID without accessing iFrame directly
 document.addEventListener("DOMContentLoaded", async function () {
     console.log("Page loaded...");
 
     let studentIDs = await fetchExistingStudentIDs();
 
-    let studentInput = document.getElementById("syracuseUniversity4"); // Replace with actual input field in your HTML
+    let studentInput = document.getElementById("student-id-input"); // Replace with actual input field in your HTML
 
     if (studentInput) {
         console.log("Student ID input detected:", studentInput);
