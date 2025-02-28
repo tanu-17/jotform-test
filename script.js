@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let studentIDs = await fetchExistingStudentIDs();
 
         let iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-        let studentInput = iframeDoc.querySelector("[name='q1_studentID']"); // Update with your field's input name
+        let studentInput = iframeDoc.querySelector("[name='syracuseUniversity4']"); // Update with your field's input name
 
         if (studentInput) {
             studentInput.addEventListener("blur", function() {
